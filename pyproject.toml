@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "algorithms"
+version = "0.1.0.dev22020529"
+description = ""
+authors = ["Jector <d581g2@gmail.com>"]
+packages = [
+  {include = "algorithms", from="src"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+virtualenv = "^20.13.1"
+asv = "^0.5.1"
+pytest = "^7.0.1"
+isort = "^5.10.1"
+autopep8 = "^1.6.0"
+pylint = "^2.13.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -vv"
+testpaths = [
+  "tests",
+]
+cache_dir = ".pytest"
